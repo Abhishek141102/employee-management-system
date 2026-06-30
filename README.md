@@ -1,16 +1,58 @@
-# React + Vite
+# Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Project Overview
 
-Currently, two official plugins are available:
+A full-stack Employee Management System with role-based login for **Admin** and **Employee**. 
+Admins can manage employees, departments, and approve/reject leave requests, while employees 
+can apply for leave and track their leave status through a personal dashboard. Built with 
+React (Vite) on the frontend and Node.js/Express with MongoDB on the backend, with secure 
+password hashing using bcrypt.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+**Frontend:**
+- React.js
+- Vite
+- Axios (API calls)
+- React Router DOM
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- bcrypt (password hashing)
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Admin Side:**
+- Secure admin login
+- Add, update, and delete employee records
+- Manage departments (add/update/delete, with safeguard against deleting departments that still have employees)
+- View all leave requests across employees
+- Approve or reject employee leave requests
+
+**Employee Side:**
+- Secure employee login
+- Personal dashboard with leave statistics (total, pending, approved, rejected)
+- Apply for new leave requests
+- View history and status of submitted leave requests
+
+**General:**
+- Role-based access (Admin vs Employee)
+- Passwords hashed using bcrypt
+- RESTful API architecture
+- Responsive UI for both desktop and mobile
+
+### Frontend Setup
+```bash
+cd emp_ms
+npm install
+npm run dev
+```
+
+### Backend Setup
+```bash
+cd emp_ms/backend
+npm install
+node server.js
+```
