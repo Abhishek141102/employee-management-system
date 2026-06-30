@@ -1,0 +1,50 @@
+.topbar {
+  width: 100%;
+  background: #14b8a6;
+  height: 55px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.topbar button {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.topbar button:hover {
+  background: rgba(255,255,255,0.35);
+  color: white;
+}
+
+.hamburger-btn {
+  display: none;
+  background: none !important;
+  border: none !important;
+  color: white !important;
+  font-size: 22px !important;
+  cursor: pointer;
+  padding: 4px 8px !important;
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+  #welc {
+    font-size: 14px;
+  }
+}
