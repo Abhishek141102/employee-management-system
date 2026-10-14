@@ -12,7 +12,23 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+  }),
+);
+
 app.use(express.json());
 app.use("/api/employees", employeeRoutes);
 app.use("/api/departments", deptRoutes);
@@ -21,7 +37,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/leaves", leaveRoutes);
 
 app.get("/", (req, res) => {
-  res.send();
+  res.json({ message: "Employee Management API is running" });
 });
 
 const PORT = process.env.PORT || 5000;
