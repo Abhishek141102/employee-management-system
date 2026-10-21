@@ -1,58 +1,57 @@
-# Employee Management System
+# 👥 Employee Management System
 
-## 📖 Project Overview
+A full-stack Employee Management System with role-based login for **Admin** and **Employee** users. Admins can manage employee records and departments, and review leave requests. Employees can apply for leave and track their request status through a personal dashboard.
 
-A full-stack Employee Management System with role-based login for **Admin** and **Employee**. 
-Admins can manage employees, departments, and approve/reject leave requests, while employees 
-can apply for leave and track their leave status through a personal dashboard. Built with 
-React (Vite) on the frontend and Node.js/Express with MongoDB on the backend, with secure 
-password hashing using bcrypt.
+Built with **React + Vite** on the frontend and **Node.js + Express.js + MongoDB** on the backend, with password hashing using bcrypt.
 
 ## 🚀 Tech Stack
 
-**Frontend:**
+### Frontend
 - React.js
 - Vite
-- Axios (API calls)
+- Axios — API requests
 - React Router DOM
 
-**Backend:**
+### Backend
 - Node.js
 - Express.js
-- MongoDB (Mongoose)
-- bcrypt (password hashing)
+- MongoDB
+- Mongoose
+- bcrypt — password hashing
+
+### Deployment
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
 
 ## ✨ Key Features
 
-**Admin Side:**
+### Admin Side
 - Secure admin login
 - Add, update, and delete employee records
-- Manage departments (add/update/delete, with safeguard against deleting departments that still have employees)
-- View all leave requests across employees
+- Manage departments (add, update, and delete)
+- Prevent department deletion when employees are still assigned to it
+- View leave requests across employees
 - Approve or reject employee leave requests
 
-**Employee Side:**
+### Employee Side
 - Secure employee login
-- Personal dashboard with leave statistics (total, pending, approved, rejected)
+- Personal dashboard with leave statistics:
+  - Total leave requests
+  - Pending requests
+  - Approved requests
+  - Rejected requests
 - Apply for new leave requests
-- View history and status of submitted leave requests
+- View leave request history and status
 
-**General:**
-- Role-based access (Admin vs Employee)
-- Passwords hashed using bcrypt
+### General
+- Role-based access control (Admin vs Employee)
+- Password hashing using bcrypt
 - RESTful API architecture
-- Responsive UI for both desktop and mobile
+- Responsive UI for desktop and mobile
 
-### Frontend Setup
-```bash
-cd emp_ms
-npm install
-npm run dev
-```
+## ☁️ Live Deployment
 
-### Backend Setup
-```bash
-cd emp_ms/backend
-npm install
-node server.js
-```
+- **Frontend:** Deployed on Vercel
+- **Backend API:** Deployed on Render
+- **Cloud Database:** MongoDB Atlas
