@@ -49,6 +49,11 @@ function Login({ onLoginSuccess }) {
 
   return (
     <div className="auth-container">
+      <header className="auth-page-header">
+        <h1>Employee Management System</h1>
+        <p>Please log in to access your account.</p>
+      </header>
+
       <div className="auth-box">
 
         <h2>{role === "admin" ? "Admin Login" : "Employee Login"}</h2>

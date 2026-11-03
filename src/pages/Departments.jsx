@@ -12,12 +12,12 @@ function Departments() {
   });
 
   const buttonStyle = {
-    padding: "8px 15px",
-    minWidth: "90px",
+    padding: "10px 18px",
     border: "none",
-    borderRadius: "5px",
+    borderRadius: "8px",
     cursor: "pointer",
-    fontSize: "14px"
+    fontSize: "14px",
+    fontWeight: "600"
   };
 
   const inputStyle = {
@@ -95,7 +95,7 @@ function Departments() {
     <div>
 
       {/* Header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div className="page-header department-page-header">
         <h2>Departments</h2>
         <button
           onClick={() => {
@@ -103,8 +103,8 @@ function Departments() {
             setEditingId(null);
             setShowForm(true);
           }}
-          style={{ ...buttonStyle, background: "#19b3d2", color: "white", marginRight: "15px", borderRadius: "5px"
-           }}
+          className="primary-action"
+          style={{ ...buttonStyle, background: "#19b3d2", color: "white" }}
         >
           + Add New Department
         </button>
@@ -140,7 +140,7 @@ function Departments() {
                 />
               </div>
 
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div className="form-actions">
                 <button
                   type="submit"
                   style={{ ...buttonStyle, background: "#2e7d32", color: "white" }}
@@ -209,13 +209,13 @@ function Departments() {
               <td>{dept.name}</td>
 
               <td>
+                <div className="table-actions">
                 <button
                   onClick={() => editDepartment(dept)}
                   style={{
                     ...buttonStyle,
                     background: "#f59e0b",
                     color: "white",
-                    marginRight: "8px"
                   }}
                 >
                   Edit
@@ -231,6 +231,7 @@ function Departments() {
                 >
                   Delete
                 </button>
+                </div>
               </td>
 
             </tr>

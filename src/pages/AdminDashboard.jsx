@@ -21,7 +21,7 @@ function AdminDashboard({ handleLogout, page, isEmployee }) {
   }, []);
 
   return (
-    <div style={{ display: "flex", height: "100vh", overflow: "hidden" }}>
+    <div className="app-shell">
 
       {isEmployee ? (
         <EmployeeSidebar isOpen={sidebarOpen} onClose={closeSidebar} />
@@ -29,12 +29,12 @@ function AdminDashboard({ handleLogout, page, isEmployee }) {
         <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       )}
 
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", minWidth: 0 }}>
+      <div className="app-main">
         <Topbar handleLogout={handleLogout} onMenuToggle={toggleSidebar} />
 
-        <div style={{ flex: 1, overflowY: "auto", padding: "20px" }}>
+        <main className="app-content">
           {page}
-        </div>
+        </main>
       </div>
 
     </div>

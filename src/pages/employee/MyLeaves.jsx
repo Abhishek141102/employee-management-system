@@ -14,11 +14,11 @@ function MyLeaves() {
   }, []);
 
   return (
-  <div style={{ padding: "20px" }}>
+  <div className="data-page">
 
     <h2 style={{ marginBottom: "20px" }}>My Leaves</h2>
 
-    <div style={tableWrapper}>
+    <div className="table-wrapper" style={tableWrapper}>
       <table style={table}>
 
         <thead>

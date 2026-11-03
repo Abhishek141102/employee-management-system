@@ -1,50 +1,81 @@
 .topbar {
-  width: 100%;
-  background: #14b8a6;
-  height: 55px;
-  color: white;
   display: flex;
-  justify-content: space-between;
+  flex: 0 0 56px;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
   padding: 0 20px;
-  box-sizing: border-box;
+  background: #14b8a6;
+  color: white;
   position: sticky;
   top: 0;
   z-index: 50;
 }
 
-.topbar button {
-  background: rgba(255,255,255,0.2);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.4);
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.2s;
+.topbar-start {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
 }
 
-.topbar button:hover {
-  background: rgba(255,255,255,0.35);
+.topbar .logout-btn {
+  flex: 0 0 auto;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
   color: white;
+  font-size: 14px;
+}
+
+.topbar .logout-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .hamburger-btn {
   display: none;
-  background: none !important;
-  border: none !important;
-  color: white !important;
-  font-size: 22px !important;
-  cursor: pointer;
-  padding: 4px 8px !important;
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  background: transparent;
+  color: white;
+  font-size: 22px;
+}
+
+#welc {
+  overflow: hidden;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
+  .topbar {
+    padding: 0 14px;
+  }
+
   .hamburger-btn {
     display: block;
   }
 
   #welc {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .topbar {
+    padding: 0 8px;
+  }
+
+  .topbar-start {
+    gap: 4px;
+  }
+
+  .topbar .logout-btn {
+    padding: 6px 10px;
   }
 }
